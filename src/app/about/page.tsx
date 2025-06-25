@@ -69,10 +69,10 @@ const AboutPage: React.FC = () => {
             <div className="md:w-1/2 text-left">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">From Humble Beginnings to Industry Leaders</h3>
               <p className="text-gray-600 mb-4">
-                We've built our reputation on a foundation of integrity, exceptional service, and a deep understanding of our clients' needs. Every project, big or small, is approached with the same dedication and attention to detail. We believe in fostering long-term relationships through trust and consistent performance.
+                We&apos;ve built our reputation on a foundation of integrity, exceptional service, and a deep understanding of our clients&apos; needs. Every project, big or small, is approached with the same dedication and attention to detail. We believe in fostering long-term relationships through trust and consistent performance.
               </p>
               <p className="text-gray-600">
-                Our journey has been marked by continuous learning and adaptation, embracing new technologies and techniques to deliver the best results. We are proud of the team we've built—a group of skilled professionals who share our commitment to excellence.
+                Our journey has been marked by continuous learning and adaptation, embracing new technologies and techniques to deliver the best results. We are proud of the team we&apos;ve built—a group of skilled professionals who share our commitment to excellence.
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
               <img src="/images/assets/team-member-1.jpg" alt="Team Member 1" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-200 group-hover:border-blue-500 transition-colors" />
               <h4 className="text-xl font-semibold text-gray-800 mb-1">John Doe</h4>
               <p className="text-blue-600 text-sm mb-3">Founder & CEO</p>
-              <p className="text-gray-600 text-sm">With over 20 years in the industry, John's vision guides our company's commitment to excellence and customer satisfaction.</p>
+              <p className="text-gray-600 text-sm">With over 20 years in the industry, John&apos;s vision guides our company&apos;s commitment to excellence and customer satisfaction.</p>
             </div>
             <div className={`bg-gray-50 p-6 rounded-lg shadow-md text-center group hover:shadow-xl transition-shadow duration-300 ${animateClass}`} style={{ animationDelay: '400ms' }}>
               <img src="/images/assets/team-member-2.jpg" alt="Team Member 2" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-200 group-hover:border-blue-500 transition-colors" />
