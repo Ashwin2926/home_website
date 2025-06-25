@@ -5,6 +5,30 @@ import PageHeader from '@/components/PageHeader';
 import Icon from '@/components/Icon';
 import Link from 'next/link';
 
+// Define the valid icon names as a union type, ensuring all icons from Icon.tsx are included
+type IconName = 
+  | 'Search'
+  | 'Globe'
+  | 'Phone'
+  | 'Menu'
+  | 'X'
+  | 'MapPin'
+  | 'Mail'
+  | 'Facebook'
+  | 'Twitter'
+  | 'Linkedin'
+  | 'Instagram'
+  | 'Hammer'
+  | 'Shield'
+  | 'CheckCircle'
+  | 'Award'
+  | 'Droplets' // Added from Icon.tsx
+  | 'Paintbrush' // Added from Icon.tsx
+  | 'Lamp' // Added from Icon.tsx
+  | 'Camera' // Added from Icon.tsx
+  | 'Zap' // Added from Icon.tsx
+  | 'Fan'; // Added from Icon.tsx
+
 const ServicesContent: React.FC = () => {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,41 +66,41 @@ const ServicesContent: React.FC = () => {
 
   const animateClass = `initial-hidden ${isInView ? 'is-in-view animate-fade-in-up' : ''}`;
 
-  const services = [
+  const services: { name: string; description: string; icon: IconName; link: string }[] = [
     {
       name: 'Plumbing Services',
       description: 'Expert repairs, installations, and maintenance for all your residential and commercial plumbing needs.',
-      icon: 'Droplets',
+      icon: 'Droplets', // Using 'Droplets' icon from Icon.tsx
       link: '/services/plumbing',
     },
     {
       name: 'Painting Services',
       description: 'Transform your space with professional interior and exterior painting services for homes and businesses.',
-      icon: 'Paintbrush',
+      icon: 'Paintbrush', // Using 'Paintbrush' icon from Icon.tsx
       link: '/services/painting',
     },
     {
       name: 'Home Decoration',
       description: 'Elevate your living spaces with bespoke home decoration and interior design solutions.',
-      icon: 'Lamp',
+      icon: 'Lamp', // Using 'Lamp' icon from Icon.tsx
       link: '/services/home-decoration',
     },
     {
       name: 'CCTV Installation',
       description: 'Reliable CCTV installation and maintenance for enhanced security of your property.',
-      icon: 'Camera',
+      icon: 'Camera', // Using 'Camera' icon from Icon.tsx
       link: '/services/cctv-installation',
     },
     {
       name: 'Electrical Services',
       description: 'Safe and efficient electrical repairs, installations, and wiring solutions for homes and offices.',
-      icon: 'Zap',
+      icon: 'Zap', // Using 'Zap' icon from Icon.tsx
       link: '/services/electrical',
     },
     {
       name: 'AC Repair & Maintenance',
       description: 'Keep your cool with our expert AC repair, servicing, and maintenance for optimal performance.',
-      icon: 'Fan',
+      icon: 'Fan', // Using 'Fan' icon from Icon.tsx
       link: '/services/ac-repair',
     },
   ];
@@ -113,7 +137,7 @@ const ServicesContent: React.FC = () => {
                   style={{ animationDelay: `${100 + index * 100}ms` }}
                 >
                   <div className="text-blue-600 mb-4">
-                    <Icon name={service.icon as any} size={48} className="group-hover:scale-110 transition-transform" />
+                    <Icon name={service.icon} size={48} className="group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.name}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>

@@ -54,6 +54,25 @@ const Icon: React.FC<IconProps> = ({ name, size = 24, className = '', ...props }
     Award: (
       <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/><path d="M17.5 10.5 22 2l-3.5 4.5"/><path d="M6.5 10.5 2 2l3.5 4.5"/></svg>
     ),
+    // Droplets, Paintbrush, Lamp, Camera, Zap, Fan
+    Droplets: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 18V6"/></svg>
+    ),
+    Paintbrush: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><path d="M18.3 12.9L12.9 18.3c-1.04 1.04-2.96 1.04-4 0L3 13c-1-1-1-3 0-4l5.4-5.4c1.04-1.04 2.96-1.04 4 0L21 9c1 1 1 3 0 4z"/><line x1="12" y1="12" x2="3" y2="3"/></svg>
+    ),
+    Lamp: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><path d="M3 13h18"/><path d="M12 2L9 13h6l-3 11"/><path d="M7 13s.5 4 2 6"/><path d="M17 13s-.5 4-2 6"/></svg>
+    ),
+    Camera: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10"/><circle cx="12" cy="12" r="3"/><path d="m18 17 4 4"/></svg>
+    ),
+    Zap: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    ),
+    Fan: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}><path d="M12 3a7 7 0 0 0-7 7c0 2.4-1.2 4.5-2.2 6.3-.9 1.6-.4 3.7 1 5.3 1.5 1.5 3.6 2 5.3 1 1.8-1 3.9-2.2 6.3-2.2 7 0 7-7 0-7z"/><path d="M16 17s-2 2-4 2-4-2-4-2"/></svg>
+    ),
   };
   return icons[name] || null;
 };
