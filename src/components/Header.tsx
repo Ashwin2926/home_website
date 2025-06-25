@@ -319,7 +319,6 @@ const DesktopDropdown = ({ link, itemVariants, pathname }: { link: (typeof navLi
 
 // --- Sub-component for Mobile Menu ---
 const MobileMenu = ({
-  links,
   onClose,
   containerVariants,
   itemVariants,

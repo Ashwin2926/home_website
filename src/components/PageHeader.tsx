@@ -2,7 +2,7 @@
 "use client";
 
 import React from 'react'; // Removed useState, useRef, useEffect
-import { motion, Variants } from 'framer-motion'; // Removed AnimatePresence
+import { motion } from 'framer-motion'; // Removed AnimatePresence
 import Link from 'next/link'; // Use Next.js Link for navigation
 // import Icon from './Icon'; // Icon is no longer needed if ChevronDown is removed
 

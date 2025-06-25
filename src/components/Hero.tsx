@@ -107,11 +107,11 @@ const Hero: React.FC = () => {
           </motion.h1>
           <motion.p
             className="text-lg max-w-xl leading-relaxed text-white/90"
-            variants={textChildVariants} // Individual text element variant
+            variants={textChildVariants}  
           >
-            Prevail is recognized as one of the world's leading industry specialists. We deliver unmatched quality and professionalism across all client projects.
+            Prevail is recognized as one of the world&apos;s leading industry specialists. We deliver unmatched quality and professionalism across all client projects.
           </motion.p>
-          {/* Wrap Button with motion.div for animation as a textChild */}
+         
           <motion.div variants={textChildVariants}>
             <Button
               variant="primary"
