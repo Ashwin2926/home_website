@@ -40,6 +40,7 @@ const AboutPage: React.FC = () => {
       <PageHeader
         title="About Us"
         subtitle="Discover Our Journey, Values, and Commitment to Excellence"
+        backgroundImage="/images/assets/bathtub.jpg"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About Us', href: '/about' },
@@ -57,13 +58,13 @@ const AboutPage: React.FC = () => {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              Founded in 20XX, Fortis Home Maintenance started with a simple mission: to provide reliable, high-quality, and transparent home maintenance services. What began as a small team with a passion for craftsmanship has grown into a leading service provider, trusted by countless homeowners and businesses.
+              Founded in 20XX, Prevail Home Maintenance started with a simple mission: to provide reliable, high-quality, and transparent home maintenance services. What began as a small team with a passion for craftsmanship has grown into a leading service provider, trusted by countless homeowners and businesses.
             </p>
           </div>
 
           <div className={`flex flex-col md:flex-row items-center gap-12 mb-16 ${animateClass}`} style={{ animationDelay: '100ms' }}>
             <div className="md:w-1/2">
-              <img src="/images/assets/about-story.jpg" alt="Our Story" className="rounded-lg shadow-xl w-full h-auto object-cover" />
+              <img src="/images/assets/about_us.jpeg" alt="Our Story" className="rounded-lg shadow-xl w-full h-auto object-cover" />
             </div>
             <div className="md:w-1/2 text-left">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">From Humble Beginnings to Industry Leaders</h3>
@@ -82,7 +83,7 @@ const AboutPage: React.FC = () => {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              Our success is driven by the expertise and dedication of our people. Get to know the professionals behind Fortis Home Maintenance.
+              Our success is driven by the expertise and dedication of our people. Get to know the professionals behind Prevail Home Maintenance.
             </p>
           </div>
 
@@ -109,7 +110,7 @@ const AboutPage: React.FC = () => {
 
           <div className={`text-center mb-12 ${animateClass}`} style={{ animationDelay: '600ms' }}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight relative pb-4">
-              Why Choose Fortis Home Maintenance?
+              Why Choose Prevail Home Maintenance?
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">

@@ -86,6 +86,7 @@ const ServicesContent: React.FC = () => {
       <PageHeader
         title="Our Comprehensive Services"
         subtitle="Your one-stop solution for all home maintenance and renovation needs."
+        backgroundImage="/images/headerimages/services.jpg"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
@@ -100,7 +101,7 @@ const ServicesContent: React.FC = () => {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              At Fortis Home Maintenance, we pride ourselves on offering a diverse range of high-quality services to meet every aspect of property care and improvement.
+              At Prevail Home Maintenance, we pride ourselves on offering a diverse range of high-quality services to meet every aspect of property care and improvement.
             </p>
           </div>
 

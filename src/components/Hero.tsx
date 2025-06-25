@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
             className="text-lg max-w-xl leading-relaxed text-white/90"
             variants={textChildVariants} // Individual text element variant
           >
-            Fortis is recognized as one of the world's leading industry specialists. We deliver unmatched quality and professionalism across all client projects.
+            Prevail is recognized as one of the world's leading industry specialists. We deliver unmatched quality and professionalism across all client projects.
           </motion.p>
           {/* Wrap Button with motion.div for animation as a textChild */}
           <motion.div variants={textChildVariants}>

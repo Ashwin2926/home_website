@@ -20,24 +20,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fortis Home Maintenance", // Default title for your site
-    template: "%s | Fortis Home Maintenance", // Template for page-specific titles
+    default: "Prevail Home Maintenance", // Default title for your site
+    template: "%s | Prevail Home Maintenance", // Template for page-specific titles
   },
   description: "Comprehensive home maintenance services: plumbing, painting, CCTV, and more.",
   keywords: ["home maintenance", "plumbing", "painting", "CCTV installation", "general maintenance", "Dubai", "UAE"],
-  authors: [{ name: "Fortis Team" }],
+  authors: [{ name: "Prevail Team" }],
   // Add more metadata as needed for SEO and social media sharing
   openGraph: {
-    title: 'Fortis Home Maintenance',
+    title: 'Prevail Home Maintenance',
     description: 'Your reliable partner for all home maintenance needs in Dubai.',
     url: 'https://yourwebsite.com', // Replace with your actual URL
-    siteName: 'Fortis Home Maintenance',
+    siteName: 'Prevail Home Maintenance',
     images: [
       {
         url: 'https://yourwebsite.com/og-image.jpg', // Replace with your OG image
         width: 1200,
         height: 630,
-        alt: 'Fortis Home Maintenance',
+        alt: 'Prevail Home Maintenance',
       },
     ],
     locale: 'en_US',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fortis Home Maintenance',
+    title: 'Prevail Home Maintenance',
     description: 'Your reliable partner for all home maintenance needs in Dubai.',
     creator: '@yourtwitterhandle', // Replace if you have one
     images: ['https://yourwebsite.com/twitter-image.jpg'], // Replace with your Twitter image

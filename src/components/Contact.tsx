@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Icon name="Mail" size={20} className="text-white" />
-                <span>contact@fortisplumbing.com</span>
+                <span>contact@Prevailplumbing.com</span>
               </div>
             </div>
           </div>

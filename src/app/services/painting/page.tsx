@@ -44,6 +44,7 @@ const PaintingServicesPage: React.FC = () => {
       <PageHeader
         title="Professional Painting Services"
         subtitle="Bringing vibrant colors and flawless finishes to your spaces."
+         backgroundImage="/images/headerimages/painting.jpg"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
@@ -60,7 +61,7 @@ const PaintingServicesPage: React.FC = () => {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              Whether you're looking to refresh your home's interior, update your office, or protect your building's exterior, Fortis Home Maintenance provides high-quality painting services with meticulous attention to detail and lasting results.
+              Whether you're looking to refresh your home's interior, update your office, or protect your building's exterior, Prevail Home Maintenance provides high-quality painting services with meticulous attention to detail and lasting results.
             </p>
           </div>
 
@@ -125,7 +126,7 @@ const PaintingServicesPage: React.FC = () => {
           {/* Why Choose Us for Painting Section */}
           <div className={`text-center mb-12 ${animateClass}`} style={{ animationDelay: '700ms' }}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight relative pb-4">
-              Why Fortis for Your Painting Project?
+              Why Prevail for Your Painting Project?
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">

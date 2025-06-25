@@ -32,16 +32,16 @@ const TopSocialBar: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-end items-center">
         <div className="flex space-x-4">
-          <Link href="https://facebook.com/fortishomemaintenance" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <Link href="https://facebook.com/Prevailhomemaintenance" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <Icon name="Facebook" size={20} className="hover:text-blue-200 transition-colors" />
           </Link>
-          <Link href="https://twitter.com/fortishome" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <Link href="https://twitter.com/Prevailhome" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <Icon name="Twitter" size={20} className="hover:text-blue-200 transition-colors" />
           </Link>
-          <Link href="https://instagram.com/fortishomemaintenance" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <Link href="https://instagram.com/Prevailhomemaintenance" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <Icon name="Instagram" size={20} className="hover:text-blue-200 transition-colors" />
           </Link>
-          <Link href="https://linkedin.com/company/fortishomemaintenance" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <Link href="https://linkedin.com/company/Prevailhomemaintenance" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Icon name="Linkedin" size={20} className="hover:text-blue-200 transition-colors" />
           </Link>
         </div>

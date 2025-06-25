@@ -1,15 +1,15 @@
 // src/app/services/general-maintenance/page.tsx
 "use client"; // Added: This component needs to be a Client Component for Framer Motion
 
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Button from '@/components/Button';
 import Icon from '@/components/Icon'; // Assuming you have an Icon component
 import { motion, Variants } from 'framer-motion'; // Added: Import motion and Variants
+import PageHeader from '@/components/PageHeader'; // Added: Import PageHeader
 
 
-// Defined: Framer Motion Variants
-const containerVariants: Variants = {
+// Defined: Framer Motion Variants for the main page sections (below the header)
+const pageSectionContainerVariants: Variants = { // Renamed for clarity
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -20,7 +20,7 @@ const containerVariants: Variants = {
   },
 };
 
-const itemVariants: Variants = {
+const pageSectionItemVariants: Variants = { // Renamed for clarity
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -67,44 +67,47 @@ const GeneralMaintenancePage: React.FC = () => {
   ];
 
   return (
-    <motion.div // Applied: containerVariants to the main div
+    <motion.div // Applied: pageSectionContainerVariants to the main div
       className="bg-gray-100 pb-16"
-      variants={containerVariants}
+      variants={pageSectionContainerVariants}
       initial="hidden"
       animate="visible"
     >
-      {/* Service-Specific Hero Section */}
-      <section className="relative bg-indigo-700 text-white py-24 mb-12 overflow-hidden">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Comprehensive General Maintenance
-          </motion.h1>
-          <motion.p variants={itemVariants} className="text-lg md:text-xl max-w-3xl mx-auto opacity-90">
-            Fortis Home Maintenance is your one-stop solution for all general property upkeep, repairs, and enhancements.
-          </motion.p>
-          <motion.div variants={itemVariants} className="mt-8 inline-block"> {/* Applied: itemVariants to the Link/Button wrapper */}
-            <Link href="/contact">
-              <Button className="px-8 py-4 text-lg bg-white text-indigo-700 hover:bg-gray-100 transition-colors">
-                Request Handyman Services
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-indigo-600 rounded-full opacity-10 blur-lg -translate-x-1/4 -translate-y-1/4"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-indigo-600 rounded-full opacity-10 blur-lg translate-x-1/4 -translate-y-1/4"></div>
-      </section>
+      {/* PageHeader Component */}
+      <PageHeader
+        title="Comprehensive General Maintenance"
+        subtitle="Prevail Home Maintenance is your one-stop solution for all general property upkeep, repairs, and enhancements."
+        backgroundImage="/images/headerimages/general_maintenance.jpg" // Assuming you have an image for general maintenance
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Services', href: '/services' },
+          { label: 'General Maintenance', href: '/services/general-maintenance' },
+        ]}
+      />
+
+      {/* "Request Handyman Services" Button - moved here as a separate animated element */}
+      <motion.div
+        variants={pageSectionItemVariants} // Apply animation to the button container
+        className="container mx-auto px-4 text-center mt-[-40px] relative z-20" // Adjust mt to visually align
+      >
+        <Link href="/contact">
+          <Button className="px-8 py-4 text-lg bg-white text-indigo-700 hover:bg-gray-100 transition-colors border-white hover:border-gray-100">
+            Request Handyman Services
+          </Button>
+        </Link>
+      </motion.div>
+
 
       {/* Detailed Service Offerings */}
-      <motion.section variants={containerVariants} className="container mx-auto px-4 py-8"> {/* Applied: containerVariants */}
-        <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+      <motion.section variants={pageSectionItemVariants} className="container mx-auto px-4 py-8"> {/* Applied: pageSectionItemVariants */}
+        <motion.h2 variants={pageSectionItemVariants} className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
           Our Wide Range of General Maintenance Services
           <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-28 h-1 bg-indigo-600 rounded-full"></span>
           <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-10 h-1 bg-indigo-400 rounded-full"></span>
         </motion.h2>
-        <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Applied: containerVariants for staggered grid items */}
+        <motion.div variants={pageSectionContainerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Applied: pageSectionContainerVariants for staggered grid items */}
           {generalMaintenanceSubServices.map((service, index) => (
-            <motion.div variants={itemVariants} key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"> {/* Applied: itemVariants to individual service cards */}
+            <motion.div variants={pageSectionItemVariants} key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"> {/* Applied: pageSectionItemVariants to individual service cards */}
               <div className="flex items-center justify-center w-14 h-14 bg-indigo-100 text-indigo-700 rounded-full mb-4">
                 {service.icon && <Icon name={service.icon} size={28} />}
               </div>
@@ -116,33 +119,33 @@ const GeneralMaintenancePage: React.FC = () => {
       </motion.section>
 
       {/* Why Choose Us for General Maintenance Section */}
-      <motion.section variants={containerVariants} className="bg-white py-16 mt-12"> {/* Applied: containerVariants */}
+      <motion.section variants={pageSectionItemVariants} className="bg-white py-16 mt-12"> {/* Applied: pageSectionItemVariants */}
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-          <motion.div variants={itemVariants} className="md:w-1/2"> {/* Applied: itemVariants */}
+          <motion.div variants={pageSectionItemVariants} className="md:w-1/2"> {/* Applied: pageSectionItemVariants */}
             <img
               src="/images/assets/general-maintenance.jpg" // Replace with a relevant general maintenance image
               alt="General Maintenance Worker"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </motion.div>
-          <motion.div variants={itemVariants} className="md:w-1/2"> {/* Applied: itemVariants */}
+          <motion.div variants={pageSectionItemVariants} className="md:w-1/2"> {/* Applied: pageSectionItemVariants */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              The Fortis Advantage for General Maintenance
+              The Prevail Advantage for General Maintenance
             </h2>
-            <motion.ul variants={containerVariants} className="space-y-4 text-lg text-gray-700"> {/* Applied: containerVariants for staggered list items */}
-              <motion.li variants={itemVariants} className="flex items-start"> {/* Applied: itemVariants */}
+            <motion.ul variants={pageSectionContainerVariants} className="space-y-4 text-lg text-gray-700"> {/* Applied: pageSectionContainerVariants for staggered list items */}
+              <motion.li variants={pageSectionItemVariants} className="flex items-start"> {/* Applied: pageSectionItemVariants */}
                 <Icon name="CheckCircle" size={24} className="text-indigo-600 mr-3 mt-1 flex-shrink-0" />
                 <span>**Multi-Skilled Technicians:** A single point of contact for diverse maintenance needs.</span>
               </motion.li>
-              <motion.li variants={itemVariants} className="flex items-start"> {/* Applied: itemVariants */}
+              <motion.li variants={pageSectionItemVariants} className="flex items-start"> {/* Applied: pageSectionItemVariants */}
                 <Icon name="CheckCircle" size={24} className="text-indigo-600 mr-3 mt-1 flex-shrink-0" />
                 <span>**Prompt & Reliable Service:** We arrive on time and complete tasks efficiently.</span>
               </motion.li>
-              <motion.li variants={itemVariants} className="flex items-start"> {/* Applied: itemVariants */}
+              <motion.li variants={pageSectionItemVariants} className="flex items-start"> {/* Applied: pageSectionItemVariants */}
                 <Icon name="CheckCircle" size={24} className="text-indigo-600 mr-3 mt-1 flex-shrink-0" />
                 <span>**Transparent Communication:** Keeping you informed throughout the service process.</span>
               </motion.li>
-              <motion.li variants={itemVariants} className="flex items-start"> {/* Applied: itemVariants */}
+              <motion.li variants={pageSectionItemVariants} className="flex items-start"> {/* Applied: pageSectionItemVariants */}
                 <Icon name="CheckCircle" size={24} className="text-indigo-600 mr-3 mt-1 flex-shrink-0" />
                 <span>**Flexible Service Plans:** Offering one-time fixes or comprehensive annual contracts.</span>
               </motion.li>
@@ -152,11 +155,11 @@ const GeneralMaintenancePage: React.FC = () => {
       </motion.section>
 
       {/* Final Call to Action */}
-      <motion.section variants={containerVariants} className="py-12 bg-indigo-700 text-white text-center mt-12"> {/* Applied: containerVariants */}
-        <motion.div variants={itemVariants} className="container mx-auto px-4"> {/* Applied: itemVariants */}
+      <motion.section variants={pageSectionItemVariants} className="py-12 bg-indigo-700 text-white text-center mt-12"> {/* Applied: pageSectionItemVariants */}
+        <motion.div variants={pageSectionItemVariants} className="container mx-auto px-4"> {/* Applied: pageSectionItemVariants */}
           <h2 className="text-3xl font-bold mb-6">Keep Your Property in Top Shape!</h2>
           <p className="text-lg opacity-90 mb-8">
-            Contact Fortis Home Maintenance for reliable and efficient general maintenance services.
+            Contact Prevail Home Maintenance for reliable and efficient general maintenance services.
           </p>
           <Link href="/contact">
             <Button variant="outline" className="px-8 py-4 text-lg bg-white text-indigo-700 hover:bg-gray-100 border-white hover:border-gray-100">

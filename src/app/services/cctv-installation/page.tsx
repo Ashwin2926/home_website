@@ -47,6 +47,7 @@ const CctvInstallationPage: React.FC = () => {
       <PageHeader
         title="CCTV Installation & Surveillance"
         subtitle="Advanced security solutions for peace of mind at your home or business."
+         backgroundImage="/images/headerimages/cctv.jpg"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
@@ -63,7 +64,7 @@ const CctvInstallationPage: React.FC = () => {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              Fortis Home Maintenance offers cutting-edge CCTV installation services to protect your property, loved ones, and assets. From initial consultation to expert setup and maintenance, we ensure robust surveillance tailored to your specific needs.
+              Prevail Home Maintenance offers cutting-edge CCTV installation services to protect your property, loved ones, and assets. From initial consultation to expert setup and maintenance, we ensure robust surveillance tailored to your specific needs.
             </p>
           </div>
 
@@ -128,7 +129,7 @@ const CctvInstallationPage: React.FC = () => {
           {/* Why Choose Us for CCTV Section */}
           <div className={`text-center mb-12 ${animateClass}`} style={{ animationDelay: '700ms' }}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight relative pb-4">
-              Why Choose Fortis for CCTV Installation?
+              Why Choose Prevail for CCTV Installation?
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">

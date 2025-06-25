@@ -44,6 +44,7 @@ const PlumbingServicesPage: React.FC = () => {
       <PageHeader
         title="Expert Plumbing Services"
         subtitle="Reliable solutions for all your residential and commercial plumbing needs."
+         backgroundImage="/images/headerimages/plumbing.jpg"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
@@ -63,7 +64,7 @@ const PlumbingServicesPage: React.FC = () => {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              At Fortis Home Maintenance, we offer a full spectrum of plumbing services to ensure your home or business's water systems run smoothly and efficiently. From leaky faucets to major pipe repairs, our certified plumbers are equipped to handle any challenge.
+              At Prevail Home Maintenance, we offer a full spectrum of plumbing services to ensure your home or business's water systems run smoothly and efficiently. From leaky faucets to major pipe repairs, our certified plumbers are equipped to handle any challenge.
             </p>
           </div>
 
@@ -128,7 +129,7 @@ const PlumbingServicesPage: React.FC = () => {
           {/* Why Choose Us for Plumbing Section */}
           <div className={`text-center mb-12 ${animateClass}`} style={{ animationDelay: '700ms' }}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight relative pb-4">
-              Why Choose Fortis for Your Plumbing Needs?
+              Why Choose Prevail for Your Plumbing Needs?
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
